@@ -4,6 +4,8 @@ import {AppRegistry, View, Text, Image, ActivityIndicator, StyleSheet } from 're
 import Camera from 'react-native-camera'; //Camera component
 import RNFetchBlob from 'react-native-fetch-blob'; //Library for fetching local files and sending bianry data
 
+const API_KEY = ''; //TODO: Insert your own API key here!!
+
 //variables for switching between back and fron camera
 const cameraTypes = {
 	front: Camera.constants.Type.front,
@@ -128,7 +130,7 @@ export default class App extends Component {
                     RNFetchBlob.fetch('POST', 'https://westus.api.cognitive.microsoft.com/emotion/v1.0/Recognize', 
                     {
                     "Content-Type":"application/octet-stream",
-                    "Ocp-Apim-Subscription-Key":"86b31e5b87dd43848edfcb2f344c55f4"
+                    "Ocp-Apim-Subscription-Key": API_KEY
                     },imgData)
                     .then((response) => {
                         //parse response
