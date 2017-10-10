@@ -10,7 +10,7 @@ namespace SpeechToText
 {
     public partial class SpeechToTextPage : ContentPage
     {
-        const string AUTH_URL = "https://api.cognitive.microsoft.com/sts/v1.0";
+        const string AUTH_URL = "https://api.cognitive.microsoft.com/sts/v1.0/issueToken";
         const string DICTATION_URL = "https://speech.platform.bing.com/speech/recognition/dictation/cognitiveservices/v1?language=en-US";
 
         // BING SPEECH API KEY
