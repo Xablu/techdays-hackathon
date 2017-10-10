@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SpeechToText" x:Class="SpeechToText.SpeechToTextPage">
+
+    <StackLayout Padding="20,80,20,0" Orientation="Vertical" WidthRequest="300" HeightRequest="400" Spacing="15" HorizontalOptions="Center" >
+        <Button x:Name="RecordButton" Text="Record" FontSize="24" HorizontalOptions="FillAndExpand" Clicked="Record_Clicked" />
+        <Button x:Name="ToTextButton" Text="To Text" FontSize="24" HorizontalOptions="FillAndExpand" Clicked="To_Text_Clicked" IsEnabled="false" />
+        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+
+            <Label x:Name="ResultLabel" HeightRequest="400" />
+            
+        </Frame>
+    </StackLayout>
+    
+</ContentPage>
