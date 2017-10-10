@@ -10,7 +10,7 @@ namespace SpeechToText
 {
     public partial class SpeechToTextPage : ContentPage
     {
-        const string AUTH_URL = "https://api.cognitive.microsoft.com/sts/v1.0";
+        const string AUTH_URL = "https://api.cognitive.microsoft.com/sts/v1.0/issueToken";
         const string DICTATION_URL = "https://speech.platform.bing.com/speech/recognition/dictation/cognitiveservices/v1?language=en-US";
 
         // BING SPEECH API KEY
@@ -123,10 +123,8 @@ namespace SpeechToText
             }
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", AUTH_KEY);
-            UriBuilder uriBuilder = new UriBuilder(AUTH_URL);
-            uriBuilder.Path += "/issueToken";
 
-            var result = await client.PostAsync(uriBuilder.Uri.AbsoluteUri, null);
+            var result = await client.PostAsync(AUTH_URL, null);
             return await result.Content.ReadAsStringAsync();
         }
 
@@ -136,11 +134,11 @@ namespace SpeechToText
         **/
         async Task<string> SendSpeechToTextRequestAsync()
         {
-            var path = recorder.GetAudioFilePath();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authenticationToken);
+
             var content = new StreamContent(recorder.GetAudioFileStream());
             content.Headers.TryAddWithoutValidation("Content-Type", "audio/wav;codec=\"audio/pcm\";samplerate=16000");
 
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authenticationToken);
             var response = await client.PostAsync(DICTATION_URL, content);
 
             return await response.Content.ReadAsStringAsync();
