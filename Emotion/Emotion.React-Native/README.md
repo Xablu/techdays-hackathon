@@ -11,7 +11,8 @@
     * uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
     * uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
     * uses-permission android:name="android.permission.CAMERA"
-    **NB: add '<' in front and '/>' at the end**
+    
+    **NB: add '<' before 'uses-permission' '/>' at the end after the "**
 9. Run the project by entering the command 'react-native run-android' NB: Make sure you have an emulator running or connected device. **IF you are using an emulator you need to go to you AVD manager->advenced settings and set camera to webcam.**
 
 ## Assignment:
