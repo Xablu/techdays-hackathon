@@ -1,9 +1,8 @@
-# Building Apps of the Future 📱
-## With with Azure Cognitive Services, Xamarin and special guest React Native
+# Building Apps of the Future with with Azure Cognitive Services, Xamarin
 Welcome, it is good to see you are here and that you are interested in building a mobile application with azure cognitive services! In this repository you will find all content that is necessary to start creating your own mobile application.
 
 ### What are you going to do?
-For this hackathon, a few samples have been prepared. You will have the choice to test out the [Azure Emotion API](https://azure.microsoft.com/en-us/services/cognitive-services/emotion/) and/or the [Bing Speech API](https://azure.microsoft.com/en-us/services/cognitive-services/speech/). And although this hackathon was titled Xamarin, we also prepared a sample for each of the API's in [React Native](http://www.reactnative.com/).
+For this hackathon, a few samples have been prepared. You will have the choice to test out the [Azure Emotion API](https://azure.microsoft.com/en-us/services/cognitive-services/emotion/) and/or the [Bing Speech API](https://azure.microsoft.com/en-us/services/cognitive-services/speech/). And although this hackathon was titled Xamarin, we also prepared a sample for the Emotion API in [React Native](http://www.reactnative.com/) for the ones interested!
 
 #### Setting up
 For this hackathon you will build an app with Xamarin and/or React Native. So step one is getting your device ready:
@@ -17,4 +16,3 @@ Your next step is choosing your Api and platform and start building your applica
 * [React Native](Emotion/Emotion.React-Native/)
 ##### Speech:
 * [Xamarin](Speech/Speech.Xamarin/)
-* [React Native](Speech/Speech.React-Native/)
