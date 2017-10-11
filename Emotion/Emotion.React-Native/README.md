@@ -8,9 +8,9 @@
 6. In the cloned repo navigate to Emotion/Emotion.React-Native/Start/AzureEmotions/ and copy package.json and index.js into your AzureEmotions project
 7. In the terminal (which is in your AzureEmotions directory) enter the command 'npm install'. When that is done, enter the command 'react-native link'.
 8. Add the following permissions to you android manifest.xml (path: AzureEmotions/android/app/src/main):
-    * <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    * <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    * <uses-permission android:name="android.permission.CAMERA" />
+    * '<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />'
+    * '<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />'
+    * '<uses-permission android:name="android.permission.CAMERA" />'
 9. Run the project by entering the command 'react-native run-android' NB: Make sure you have an emulator running or connected device. **IF you are using an emulator you need to go to you AVD manager->advenced settings and set camera to webcam.**
 
 ## Assignment:
