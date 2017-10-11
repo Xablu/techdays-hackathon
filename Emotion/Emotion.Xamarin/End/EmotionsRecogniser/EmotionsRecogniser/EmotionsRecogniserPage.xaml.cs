@@ -11,6 +11,9 @@ namespace EmotionsRecogniser
 {
     public partial class EmotionsRecogniserPage : ContentPage
     {
+        // Personal Emotion API Key
+        const string EMOTION_KEY = "FILL IN YOUR OWN API KEY HERE";
+
         public EmotionsRecogniserPage()
         {
             InitializeComponent();
@@ -53,9 +56,7 @@ namespace EmotionsRecogniser
         // from a picture of a face.
         private static async Task<Emotion[]> GetHappiness(Stream stream)
 		{
-			string emotionKey = "REPLACE THIS WITH YOUR OWN API KEY";
-
-			EmotionServiceClient emotionClient = new EmotionServiceClient(emotionKey);
+            EmotionServiceClient emotionClient = new EmotionServiceClient(EMOTION_KEY);
 
             var emotionResults = await emotionClient.RecognizeAsync(stream);
 

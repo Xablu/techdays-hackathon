@@ -3,17 +3,23 @@
 	<StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center" Margin="0,20,0,0" >
         <Button Text="Photo" Clicked="Handle_Clicked"/>
         <Frame Margin="0,0,0,20">
-        <Image x:Name="PhotoImage" WidthRequest="200" HeightRequest="250" />
+            <Image x:Name="PhotoImage" WidthRequest="200" HeightRequest="200" />
         </Frame>
         <Label HorizontalTextAlignment="Center" Text="Result" FontAttributes="Bold" FontSize="20" />
-        <Label HorizontalTextAlignment="Center" x:Name="AngerLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="ContemptLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="DisgustLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="FearLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="HappinessLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="NeutralLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="SadnessLabel" />
-        <Label HorizontalTextAlignment="Center" x:Name="SurpriseLabel" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Margin="30,10,30,10" Spacing="10">
+                <Label HorizontalTextAlignment="Center" x:Name="AngerLabel" />
+                <Label HorizontalTextAlignment="Center" x:Name="ContemptLabel" />
+                <Label HorizontalTextAlignment="Center" x:Name="DisgustLabel" />
+                <Label HorizontalTextAlignment="Center" x:Name="FearLabel" />
+            </StackLayout>
+            <StackLayout Margin="30,10,30,10" Spacing="10">
+                <Label HorizontalTextAlignment="Center" x:Name="HappinessLabel" />
+                <Label HorizontalTextAlignment="Center" x:Name="NeutralLabel" />
+                <Label HorizontalTextAlignment="Center" x:Name="SadnessLabel" />
+                <Label HorizontalTextAlignment="Center" x:Name="SurpriseLabel" />
+            </StackLayout>
+        </StackLayout>
         <ActivityIndicator IsRunning="false" x:Name="ActivityIndicator"/>
     </StackLayout>
 </ContentPage>
